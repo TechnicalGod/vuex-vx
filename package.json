@@ -1,0 +1,11 @@
+{
+  "name": "vuex-vx",
+  "version": "1.0.2",
+  "description": "vx 基于vuex的集合版本",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dyh",
+  "license": "ISC"
+}
