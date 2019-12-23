@@ -6,7 +6,6 @@ interface errLogType {
 let errData: errLogType = {
     mgData:{}
 }
-// 失败回调
 let errLog: Function = function () { return log.error(errData.mgData) }
 export {
     log,

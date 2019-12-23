@@ -15,7 +15,6 @@ let observe = function (obj: any) {
         })
     }
 }
-// 注册 store
 let registerStore = function (target: optionsType) {
     vm = target.vue;
     let moduleName = target.moduleName || vm.$options.name+ 'Module' || 'module'
@@ -37,11 +36,9 @@ let registerStore = function (target: optionsType) {
     })
 
 }
-// 更新 state
 let modification = function (options: modificationType) {
     return Object.assign(options.target, options.newData)
 }
-// 销毁临时 store
 let unregisterModule = function (moduleName: unregisterModuleType['moduleName'],cb?:unregisterModuleType['cb']) {
     if(!vm.$store || !vm.$store.unregisterModule) return console.error("销毁失败, 确认 'this' 指向vue的当前实例")
     vm.$store.unregisterModule([moduleName])
@@ -59,7 +56,6 @@ let state: any = {
     getters: {},
     modules: {}
 }
-// 临时store
 let Temporary: TemporaryType = {
     registerStore,
     State: state.state,
