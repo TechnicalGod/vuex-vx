@@ -6,7 +6,7 @@ interface errLogType {
 let errData: errLogType = {
     mgData:{}
 }
-let errLog: Function = function () { return log.error(errData.mgData) }
+let errLog: Function = function () { return log && log.error(errData.mgData) }
 export {
     log,
     errLog,

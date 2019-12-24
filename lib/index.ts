@@ -1,5 +1,6 @@
 import { State, Module, Getter, Action, Mutation } from './vx'
-import { Temporary, modification, unregisterModule } from './Temporary-state/index'
+import { state,  modification, unregisterModule, registerStore } from './Temporary-state/index'
+const Temporary = state
 const _defalut = {
     State,
     Module,
@@ -7,6 +8,7 @@ const _defalut = {
     Action,
     Mutation,
     Temporary,
+    registerStore,
     modification,
     unregisterModule
 }
@@ -18,6 +20,7 @@ export {
     Action,
     Mutation,
     Temporary,
+    registerStore,
     modification,
     unregisterModule
 } 

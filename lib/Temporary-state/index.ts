@@ -26,6 +26,7 @@ let registerStore = function (target: optionsType) {
     }
     vm.$nextTick(() => {
         if (target.isTemporary) {
+            console.log('state',state);
             vm.$store.registerModule(moduleName, state, { preserveState: target.preserveState || false });
             target.success && target.success({
                 moduleName,
@@ -49,7 +50,13 @@ let unregisterModule = function (moduleName: unregisterModuleType['moduleName'],
     Temporary.Mutation = {}
     cb && cb(Temporary)
 }
-let state: any = {
+let state: {
+    state:any,
+    mutations:any,
+    actions:any,
+    getters:any,
+    modules:any
+} = {
     state: {},
     mutations: {},
     actions: {},
@@ -71,5 +78,6 @@ export {
     registerStore,
     Temporary,
     modification,
-    unregisterModule
+    unregisterModule,
+    state
 }

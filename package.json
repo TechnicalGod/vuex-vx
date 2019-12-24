@@ -1,6 +1,6 @@
 {
   "name": "vuex-vx",
-  "version": "1.0.2",
+  "version": "1.0.9",
   "description": "vx 基于vuex的集合版本",
   "main": "index.js",
   "scripts": {
